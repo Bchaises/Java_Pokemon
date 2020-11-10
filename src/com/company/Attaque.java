@@ -40,6 +40,4 @@ public class Attaque {
         String res = nom + "{id=" + id + ", dégats=" + degats +"}";
         return res;
     }
-
-
 }
