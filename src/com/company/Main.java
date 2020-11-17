@@ -16,6 +16,9 @@ public class Main {
 
         System.out.println(p2);
 
+        DBManager d = new DBManager();
+        d.connection();
+
         p.crier();
     }
 }
