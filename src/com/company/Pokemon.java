@@ -61,7 +61,7 @@ public class Pokemon {
         Attaque.add(a);
     }
 
-    public void TaperFortSur(Pokemon p){
-
+    public void TaperFortSur(Pokemon p, int a){
+        p.setPointDeVie(p.getPointDeVie() - this.Attaque.get(a).getDegats());
     }
 }
