@@ -42,7 +42,7 @@ public class Pokemon {
     public int getId(){ return this.id; }
     public String getNom(){ return this.nom; }
     public int getPointDeVie() { return this.pointDeVie; }
-    public int getNiveaua() { return this.niveau; }
+    public int getNiveau() { return this.niveau; }
     public ArrayList getAttaque() { return this.Attaque; }
 
     // setter
