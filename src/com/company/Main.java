@@ -1,8 +1,11 @@
 package com.company;
 
+import java.sql.SQLException;
+import java.util.ArrayList;
+
 public class Main {
 
-    public static void main(String[] args) {
+    public static void main(String[] args) throws SQLException {
         Pokemon p = new Pokemon(4,"Salameche",100,1);
         Pokemon p2 = new Pokemon(4,"Pikachu",100,1);
 
@@ -20,5 +23,22 @@ public class Main {
         d.connection();
 
         p.crier();
+
+        // 1 - méthode getAllPokemon()
+
+        ArrayList<Pokemon> liste = new ArrayList<Pokemon>();
+        liste = d.getAllPokemon();
+
+        for (int i = 0; i < 151 ; i++){
+            System.out.println(liste.get(i).getId() + " : " + liste.get(i).getNom() );
+        }
+
+        // 2 - Méthode getPokemonById(int id)
+        Pokemon pikachu = d.getPokemonById(25);
+        System.out.println(pikachu.getId() + " : " + pikachu.getNom());
+
+        // 3 - Intégrer les dresseurs (créer une classe en Java)
+        // Dresseur d = new Dresseur();
+        // d.setNom("Zab");
     }
 }

@@ -20,12 +20,21 @@ public class Pokemon {
         this.Attaque = new ArrayList<>();
     }
 
+
     // constructeur
     public Pokemon(int i, String n, int p, int niv){
         this.id = i;
         this.nom = n;
         this.pointDeVie = p;
         this.niveau = niv;
+        this.Attaque = new ArrayList<>();
+    }
+
+    public Pokemon(int i, String n){
+        this.id = i;
+        this.nom = n;
+        this.pointDeVie = 0;
+        this.niveau = 0;
         this.Attaque = new ArrayList<>();
     }
 
@@ -45,7 +54,7 @@ public class Pokemon {
 
     @Override
     public String toString() {
-        String res = nom + "{id=" + id + ", nom=" + nom + ", niveau=" + niveau + ", pointDeVie=" + pointDeVie+"}";
+        String res = nom + "{id=" + id + ", nom=" + nom + ", niveau=" + niveau + ", pointDeVie=" + pointDeVie+"}\n";
         for (Attaque at : this.Attaque){
             res = res + at.getNom()+"\n";
         }
