@@ -112,7 +112,8 @@ public class DBManager {
         ArrayList<Pokemon> res = new ArrayList<>();
         try{
             this.stmt = this.connection.createStatement();
-            String query = "SELECT Pokemon.id_pok, Pokemon.nom_pok, lvl_pok FROM dresseur, Pokemon, detientPokemon " +
+            String query = "SELECT Pokemon.id_pok, Pokemon.nom_pok, lvl_pok " +
+                           "FROM dresseur, Pokemon, detientPokemon " +
                            "WHERE Pokemon.id_pok = detientPokemon.id_pok " +
                            "AND detientPokemon.id_dress = dresseur.id_dress " +
                            "AND Dresseur.id_dress=?";
