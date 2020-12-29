@@ -1,5 +1,6 @@
 package com.company;
 
+import javax.swing.*;
 import java.sql.SQLException;
 import java.util.ArrayList;
 import java.util.Scanner;
@@ -54,5 +55,8 @@ public class Main {
         for (Pokemon p : tab){
            System.out.println(p.getNom() + " lvl " + p.getNiveau());
         }
+
+        JFrame laFenetre = new showPokemon();
+        laFenetre.setVisible(true);
     }
 }
